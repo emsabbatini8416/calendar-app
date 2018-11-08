@@ -1,0 +1,39 @@
+table {
+
+    th {
+        position: relative;
+        border: 1px solid gray;
+        background: white;
+        width: 100px;
+        text-align: center;
+    }
+
+    th:after {
+        display: block;
+        margin-top: 100%;
+    }
+
+    td {
+        position: relative;
+        border: 1px solid gray;
+        background: white;
+        width: 100px;
+    }
+
+    td:after {
+        content: '';
+        display: block;
+        margin-top: 100%;
+    }
+
+    td div.content {
+        margin: -1px -1px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 100%;
+        
+    }
+}

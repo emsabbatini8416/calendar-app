@@ -1,0 +1,29 @@
+
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{model.alertTitle}} - {{model.alertDay.month}} / {{model.alertDay.day}} / {{model.alertDay.year}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss(false)">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    
+    <div class="form-group">
+        <label for="alertTitle">Alert Title</label>
+        <input id="alertTitle" class="form-control" [(ngModel)]="alert.title" placeholder="Title">
+    </div>
+    <div class="form-group">
+        <label for="alertFrom">Alert Time From</label>
+        <input id="alertFrom" class="form-control" [(ngModel)]="alert.from" placeholder="Ex. 12:30">
+    </div>
+    <div class="form-group">
+        <label for="alertTo">Alert Time To</label>
+        <input id="alertTo" class="form-control" [(ngModel)]="alert.to" placeholder="Ex. 13:00">
+    </div>
+    <div class="form-group">
+        <label for="alertColor">Alert Color</label>
+        <input id="alertColor" type="color" [(ngModel)]="alert.color" class="form-control">
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="onSave()">Save</button>
+</div>

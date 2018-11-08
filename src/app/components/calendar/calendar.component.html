@@ -1,0 +1,18 @@
+<table class="col">
+  <thead>
+    <tr>
+      <th *ngFor="let name of calendarDays; index as dayIndex;">
+        {{name}}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container>
+      <tr *ngFor="let week of calendarMonth; index as weekIndex;">
+        <td *ngFor="let day of week; index as dayIndex;">
+          <calendar-day-component [day]="day"></calendar-day-component>
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

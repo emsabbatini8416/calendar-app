@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand">Calendar</a>
+  </nav>
+<div class="row">
+    <div class="col-md-3">
+        <div class="row">
+            <div class="col-md-12 small-calendar">
+                <ngb-datepicker #dp [(ngModel)]="model" 
+                    (select)="onDateSelect($event)">
+                </ngb-datepicker>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <calendar-component [year]="selectYear" [month]="selectMonth" [day]="selectDay"></calendar-component>
+    </div>
+</div>
+

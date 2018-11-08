@@ -1,0 +1,10 @@
+<div class="content" >
+    <span (click)="onCreateAlert()"><b>{{ day ? day.day : '' }}</b></span>   
+    <div class="row">
+        <div class="col">
+            <ul>
+                <li *ngFor="let alert of alerts;" (click)="onEditAlert(alert)">{{alert.title}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
